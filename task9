@@ -1,0 +1,22 @@
+public class ArrayShifting {
+    public static void main(String[] args) {
+        int[] myList = new int[5];
+        for (int i = 0; i < myList.length; i++) {
+            myList[i] = (int) (Math.random() * myList.length);
+        }
+        System.out.println("Array before shifting: ");
+        for (int i = 0; i < myList.length; i++) {
+            System.out.print(myList[i] + " ");
+        }
+        int firstElement = myList[0];
+        for (int i = 0; i < myList.length - 1; i++) {
+            myList[i] = myList[i + 1];
+        }
+        myList[myList.length - 1] = firstElement;
+        System.out.println();
+        System.out.println("Array after shifting: ");
+        for (int i = 0; i < myList.length; i++) {
+            System.out.print(myList[i] + " ");
+        }
+    }
+}
